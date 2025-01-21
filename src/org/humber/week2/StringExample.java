@@ -6,7 +6,7 @@ public class StringExample {
         String str = "Hello, World!";
         String str2 = "Hello, World!";
         String str3 = new String("Hello, World!");
-        boolean isEqual = str == str2;
+        boolean isEqual = (str == str2);
         System.out.println("str == str2 " + isEqual);
         System.out.println("str == str3 " + (str == str3));
         System.out.println("str.equals(str3) " + (str.equals(str3)));
