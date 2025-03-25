@@ -1,6 +1,12 @@
 package org.humber.week10;
 
-abstract class Shape {
+
+abstract class Polygon {
+
+    abstract public double getPerimeter();
+}
+
+abstract class Shape extends Polygon {
 
     private int edgeLength;
 
@@ -30,12 +36,21 @@ class Square extends Shape {
     public int getSideLength() {
         return getEdgeLength();
     }
+
+    @Override
+    public double getPerimeter() {
+        return 4 * getEdgeLength();
+    }
 }
 
 class EquilateralTriangle extends Shape {
 
     public EquilateralTriangle() {
         super(12);
+    }
+
+    public EquilateralTriangle(int edgeLength) {
+        super(edgeLength);
     }
 
     @Override
@@ -45,6 +60,11 @@ class EquilateralTriangle extends Shape {
 
     public int getSideLength() {
         return getEdgeLength();
+    }
+
+    @Override
+    public double getPerimeter() {
+        return 3 * getSideLength();
     }
 }
 
@@ -62,6 +82,11 @@ class Circle extends Shape {
 
     public int getRadius() {
         return getEdgeLength();
+    }
+
+    @Override
+    public double getPerimeter() {
+        return 2 * Math.PI * getEdgeLength();
     }
 }
 
@@ -104,6 +129,7 @@ public class AbstractExample2 {
             }
 
             System.out.println("Area: " + shape.getArea(shape.getEdgeLength()));
+            System.out.println("Perimeter: " + shape.getPerimeter());
         }
     }
 

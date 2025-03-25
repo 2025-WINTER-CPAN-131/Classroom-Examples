@@ -16,7 +16,7 @@ public class SchoolBus extends Bus {
     }
 
     public static void main(String[] args) {
-        Bus schoolBus = new SchoolBus();
+        Bus schoolBus = new Bus();
         printVehicle(schoolBus);
 
         SchoolBus schoolBus1 = (SchoolBus) schoolBus;

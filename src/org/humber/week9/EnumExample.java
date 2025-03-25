@@ -26,7 +26,7 @@ enum Day {
 public class EnumExample {
 
     public static void main(String[] args) {
-        Day day = Day.WEDNESDAY;
+        Day day = Day.TUESDAY;
         System.out.println(day.getDay());
     }
 

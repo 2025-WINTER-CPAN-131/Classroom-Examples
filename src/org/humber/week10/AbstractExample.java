@@ -2,7 +2,6 @@ package org.humber.week10;
 
 abstract class Employee {
 
-
     abstract public double getSalary();
 
     public int getTotalVacationDays() {
