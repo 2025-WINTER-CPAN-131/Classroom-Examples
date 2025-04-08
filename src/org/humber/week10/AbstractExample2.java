@@ -96,13 +96,15 @@ public class AbstractExample2 {
     public static void main(String[] args) {
         Shape unknown = new Shape(8) {
             @Override
+            public double getPerimeter() {
+                return 0;
+            }
+
+            @Override
             public double getArea(int edgeLength) {
                 return edgeLength * 10;
             }
 
-            public int getUnknownLength() {
-                return -1;
-            }
         };
 
         Shape square = new Square(5);
